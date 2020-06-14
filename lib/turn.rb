@@ -23,7 +23,7 @@ def valid_move?(board, index)
 end
 
 def input_to_index(input)
-  index = input.strip.to_i - 1
+  input.to_i - 1
 end
 
 def move(board, index, token = "X")
@@ -34,9 +34,9 @@ def turn(board)
 # ask for input
   puts "Please enter 1-9:"
 # get input
-  input = gets
+  input = gets.strip
 # convert input to index
-  input_to_index(input)
+  index = input_to_index(input)
 # if index is valid
   if valid_move?
 #   make the move for index
